@@ -1,5 +1,6 @@
-var resolve = require("path").resolve;
-var webpack = require("webpack");
+const resolve = require("path").resolve;
+const webpack = require("webpack");
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
   entry: "./src/entry.js",
@@ -12,7 +13,21 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: "vue-loader"
+        loader: 'vue-loader'
+      },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'vue-loader'
+          },
+          {
+            loader: resolve(__dirname, "../lib/markdown-compiler"),
+            options: {
+              raw: true
+            }
+          }
+        ]
       },
       {
         test: /\.js$/,
@@ -25,14 +40,12 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
-      },
-      {
-        test: /\.md$/,
-        loader: resolve(__dirname, "../index.js"),
-        options: {}
       }
     ]
   },
+  plugins: [
+    new VueLoaderPlugin()
+  ],
   devServer: {
     historyApiFallback: true,
     noInfo: true

@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/QingWei-Li/vue-markdown-loader.git"
+    "url": "git+https://github.com/wygkzqa/vue-markdown-loader.git"
   },
   "keywords": [
     "vue",
@@ -16,12 +16,12 @@
     "webpack",
     "loader"
   ],
-  "author": "qingwei-li <qingwei.li@gmail.com>",
+  "author": "wygkzqa <wygkzqa@gmail.com>",
   "license": "WTFPL",
   "bugs": {
-    "url": "https://github.com/QingWei-Li/vue-markdown-loader/issues"
+    "url": "https://github.com/wygkzqa/vue-markdown-loader/issues"
   },
-  "homepage": "https://github.com/QingWei-Li/vue-markdown-loader#readme",
+  "homepage": "https://github.com/wygkzqa/vue-markdown-loader#readme",
   "dependencies": {
     "cheerio": "^0.20.0",
     "highlight.js": "^9.4.0",
@@ -38,10 +38,11 @@
     "css-loader": "^0.25.0",
     "github-markdown-css": "^2.3.0",
     "style-loader": "^0.13.1",
-    "vue": "^2.0.3",
-    "vue-loader": "^12.1.0",
-    "vue-template-compiler": "^2.3.3",
-    "webpack": "^2.6.0",
-    "webpack-dev-server": "^2.4.5"
+    "vue": "^2.5.16",
+    "vue-loader": "^15.5.1",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.1.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.1"
   }
 }
